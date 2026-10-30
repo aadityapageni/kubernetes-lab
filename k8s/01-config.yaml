@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shop-config
+  namespace: observability
+data:
+  APP_MESSAGE: "Kubernetes platform lab"
+  DEPLOYMENT_ENVIRONMENT: "kubernetes-lab"
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: shop-app
+  namespace: observability
+automountServiceAccountToken: false
